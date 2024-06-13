@@ -1,6 +1,6 @@
 <?php
-session_start();
 include '../function.php';
+session_start();
 if (!isset($_SESSION["sessionuser"])) {
 	?> <script> location.replace("../../login.php"); </script> <?php
 }
@@ -21,7 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MHS | Dashboard</title>
+  <title>MHS | Chat</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -29,6 +29,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini">
 
@@ -48,12 +49,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+          <!-- Anonymous  -->
             <h1 class="m-0">Chat</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"> Chat </li>
+              <li class="breadcrumb-item active">Chat</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -89,120 +91,58 @@ if ($msg['s'] != "") {
     </div>
     <?php
 }
-
-$doc = $_GET['doc'];
-$us = $_GET['user'];
-
-$select = "SELECT * FROM doc_user WHERE User='$us' AND Doc='$doc' ";
-$select_ex = mysqli_query($con,$select);
-$select_count = mysqli_num_rows($select_ex);
-$selectok_data = mysqli_fetch_array($select_ex);
-
-$doccode = $selectok_data['Doc'];
-
-$selectone = "SELECT * FROM users WHERE Code='$doccode' ";
-$selectone_ex = mysqli_query($con,$selectone);
-$selectone_count = mysqli_num_rows($selectone_ex);
-$selectoneok_data = mysqli_fetch_array($selectone_ex);
-
 ?>
 
-<div class="p-3">
+    <div class="bg-white p-2">
 
-<div class="p-2 bg-primary">
-
-<div class="user-panel d-flex">
-    <div class="image">
-    <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-    </div>
-    <div class="info">
-    <a class="d-block text-white"><?php echo $selectoneok_data['Name']; ?></a>
-    </div>
-</div>
-
-</div>
-
-<div class="rounded bg-white" style="max-height: 400px; border: 1px solid rgb(209, 206, 206); position:relative; overflow:auto; transform:rotate(180deg);">
-
-<div class="mt-5" style="transform:rotate(-180deg);">
-              <?php
-while ($select_data = mysqli_fetch_array($select_ex)) {
-  if ($select_data['Acti'] == '1') {
-    ?>
-    <div class="d-flex justify-content-end w-100 my-1">
-      <div class="bg-success p-2">
-        <?php echo $select_data['Message']; ?>
+      <div class="user-panel d-flex">
+        <div class="image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a class="d-block text-dark">Alexander Pierce</a>
+        </div>
       </div>
-    </div>
-    <?php
-  }else{
-    ?>
-    <div class="d-flex justify-content-start w-100 my-1">
-      <div class="bg-light p-2">
-        <?php echo $select_data['Message']; ?>
-      </div>
-    </div>
-    <?php
-  }
-}
 
-?>
-</div>
-            </div>
-            <div style="border: 1px solid rgb(209, 206, 206);" class="p-1">
-            <form action="" method="POST">
-                <div class="d-flex align-items-center">
-                    <input type="text" class="form-control" name="chats" placeholder="Message">
-                    <button type="submit" name="submit" class="btn btn-primary m-1"> <div class="d-flex align-items-center">
-                    <i class="fas fa-paper-plane"></i>
-                    <span class="ml-2">Send</span>
-                    </div></button>
-                </div>
-
+      <table class="table">
+              <thead>
+                <th>UID</th>
+                <th>Name</th>
+                <th>Chat</th>
+              </thead>
+              <tbody>
 <?php
 
-if (isset($_POST['submit'])) {
+$usercode = userdata($con, "Code");
 
-  $chats = $_POST['chats'];
+$selectone = " SELECT * FROM colab WHERE Doctor_Code='$usercode' ";
+$selectone_ex = mysqli_query($con,$selectone);
+$selectone_count = mysqli_num_rows($selectone_ex);
 
-  $mode = userdata($con, "Mode");
-
-  if ($mode == 0) {
-    $data = [
-        'User' => $us,
-        'Doc' => $doc,
-        'Message' => $chats,
-        'Acti' => 1,
-    
-    ];
-  }else{
-    $data = [
-        'User' => $us,
-        'Doc' => $doc,
-        'Message' => $chats,
-        'Acti' => 0,
-    
-    ];
-  }
-
-$result = insert($con,'doc_user',$data);
-
-if ($result) {
-  $_SESSION['success'] = "Chat is added";
-  ?> <script> location.replace("doc_chats.php?doc=<?php echo $doc; ?>&user=<?php echo $us; ?>"); </script> <?php
-}else{
-  $_SESSION['error'] = "Chat is unable to added";
-  ?> <script> location.replace("doc_chats.php?doc=<?php echo $doc; ?>&user=<?php echo $us; ?>"); </script> <?php
-}
-
+while ($selectone_data = mysqli_fetch_array($selectone_ex)) {
+  ?>
+                <tr>
+                  <td><?php echo $selectone_data['UID']; ?></td>
+                  <td><?php
+                  $doscode = $selectone_data['User_code'];
+                  echo findcli($con,$doscode);
+                  ?></td>
+                  <td>
+                    <a href="doc_go.php?userid=<?php echo $doscode; ?>&docs=<?php echo $usercode; ?>" class="btn btn-sm btn-success"><i class="fas fa-eye"></i></a>
+                  </td>
+                </tr>
+  <?php
 }
 
 ?>
+                <tr>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
 
-                </form>
-              </div>
 
-</div>
+    </div>
 
     </div>
     <!-- /.content -->

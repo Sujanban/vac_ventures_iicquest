@@ -93,66 +93,99 @@ if ($msg['s'] != "") {
 }
 ?>
 
-    <div class="card">
-      <div class="card-header p-2">
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link active" href="#timeline" data-toggle="tab">Doctor</a></li>
-        </ul>
-      </div><!-- /.card-header -->
-      <div class="card-body">
-        <div class="tab-content">
-          
-          <!-- /.tab-pane -->
-          <div class="active tab-pane" id="timeline">
-            <!-- The timeline -->
+    <div class="bg-white p-2">
 
-            <table class="table">
-              <thead>
-                <th>S.N</th>
-                <th>Doctor</th>
-                <th>Chat</th>
-              </thead>
-              <tbody>
+      <div class="user-panel d-flex">
+        <div class="image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a class="d-block text-dark">Alexander Pierce</a>
+        </div>
+      </div>
 
-<?php
+
+
+      <div class="rounded" style="max-height: 400px; border: 1px solid rgb(209, 206, 206); position:relative; overflow:auto; transform:rotate(180deg);">
+
+<div class="mt-5" style="transform:rotate(-180deg);">
+              <?php
+
+$userid = $_GET['userid'];
+$docs = $_GET['docs'];
 
 $usercode = $_SESSION['sessionuser'];
 
-$selectone = "SELECT * FROM colab WHERE Doctor_Code='$usercode' ";
-$selectone_ex = mysqli_query($con,$selectone);
-$selectone_count = mysqli_num_rows($selectone_ex);
+$select = "SELECT * FROM doc_user WHERE Doc='$docs' AND User='$userid' ";
+$select_ex = mysqli_query($con,$select);
+$select_count = mysqli_num_rows($select_ex);
+while ($select_data = mysqli_fetch_array($select_ex)) {
+  if ($select_data['Acti'] == 1) {
+    ?>
+    <div class="d-flex justify-content-end w-100 my-1">
+      <div class="bg-success p-2">
+        <?php echo $select_data['Message']; ?>
+      </div>
+    </div>
+    <?php
+  }else{
+    ?>
+    <div class="d-flex justify-content-start w-100 my-1">
+      <div class="bg-light p-2">
+        <?php echo $select_data['Message']; ?>
+      </div>
+    </div>
+    <?php
+  }
+}
 
-while ($selectone_data = mysqli_fetch_array($selectone_ex)) {
+?>
+</div>
+            </div>
+            <div style="border: 1px solid rgb(209, 206, 206);" class="p-1">
+            <form action="" method="POST">
+                <div class="d-flex align-items-center">
+                    <input type="text" class="form-control" name="chats" placeholder="Message">
+                    <button type="submit" name="submit" class="btn btn-primary m-1"> <div class="d-flex align-items-center">
+                    <i class="fas fa-paper-plane"></i>
+                    <span class="ml-2">Send</span>
+                    </div></button>
+                </div>
 
-  ?>
-                <tr>
-                  <td><?php echo $selectone_data['UID']; ?></td>
-                  <td>
-                    <?php
-                    $doc = $selectone_data['User_code'];
-                    $selectwo = "SELECT * FROM users WHERE Code='$doc' ";
-                    $selectwo_ex = mysqli_query($con,$selectwo);
-                    $selectwo_data = mysqli_fetch_array($selectwo_ex);
-                    echo $selectwo_data['Name'];
-                    ?>
-                  </td>
-                  <td> <a href="doc_go.php?user=<?php echo $doc; ?>&doc=<?php echo $usercode; ?>" class="btn btn-sm btn-success"><i class="fas fa-eye"></i></a> </td>
-                </tr>
-  <?php
+<?php
+
+if (isset($_POST['submit'])) {
+
+  $chats = $_POST['chats'];
+
+  $data = [
+    'User' => $usercode,
+    'Doc' => $docs,
+    'Message' => $chats,
+    'Acti' => 1
+];
+
+$result = insert($con,'doc_user',$data);
+
+if ($result) {
+  $_SESSION['success'] = "Chat is added";
+  ?> <script> location.replace("doc_chat.php?userid=<?php echo $userid; ?>&docs=<?php echo $docs; ?>"); </script> <?php
+}else{
+  $_SESSION['error'] = "Chat is unable to added";
+  ?> <script> location.replace("doc_chat.php?userid=<?php echo $userid; ?>&docs=<?php echo $docs; ?>"); </script> <?php
+}
 
 }
 
 ?>
-              
-              </tbody>
-            </table>
 
-          </div>
-          <!-- /.tab-pane -->
-          <!-- /.tab-pane -->
-        </div>
-        <!-- /.tab-content -->
-      </div><!-- /.card-body -->
+                </form>
+              </div>
+
+
+
+
+
     </div>
 
     </div>

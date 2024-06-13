@@ -195,42 +195,36 @@ if ($result) {
 
             <table class="table">
               <thead>
-                <th>S.N</th>
-                <th>Doctor</th>
+                <th>UID</th>
+                <th>Name</th>
                 <th>Chat</th>
               </thead>
               <tbody>
-
 <?php
 
-echo $usercode;
-
-$selectone = "SELECT * FROM colab WHERE User_code='$usercode' ";
+$selectone = " SELECT * FROM colab WHERE User_code='$usercode' ";
 $selectone_ex = mysqli_query($con,$selectone);
 $selectone_count = mysqli_num_rows($selectone_ex);
 
 while ($selectone_data = mysqli_fetch_array($selectone_ex)) {
-
   ?>
                 <tr>
                   <td><?php echo $selectone_data['UID']; ?></td>
+                  <td><?php
+                  $doscode = $selectone_data['Doctor_Code'];
+                  echo finddoc($con,$doscode);
+                  ?></td>
                   <td>
-                    <?php
-                    $doc = $selectone_data['Doctor_Code'];
-                    $selectwo = "SELECT * FROM users WHERE Code='$doc' ";
-                    $selectwo_ex = mysqli_query($con,$selectwo);
-                    $selectwo_data = mysqli_fetch_array($selectwo_ex);
-                    echo $selectwo_data['Name'];
-                    ?>
+                    <a href="doc_chat.php?userid=<?php echo $usercode; ?>&docs=<?php echo $doscode; ?>" class="btn btn-sm btn-success"><i class="fas fa-eye"></i></a>
                   </td>
-                  <td> <a href="doc_chats.php?user=<?php echo $usercode; ?>&doc=<?php echo $doc; ?>" class="btn btn-sm btn-success"><i class="fas fa-eye"></i></a> </td>
                 </tr>
   <?php
-
 }
 
 ?>
-              
+                <tr>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
 
