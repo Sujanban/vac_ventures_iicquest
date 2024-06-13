@@ -4,7 +4,7 @@
         class="relative px-4 py-4 flex justify-between items-center bg-white"
       >
         <a class="text-3xl font-bold leading-none" href="index.php">
-          <img class="h-8" src="./assets/logo.jpg" alt="" />
+          <img class="h-8" src="./assets/logo.JPG" alt="" />
         </a>
         <div class="lg:hidden">
           <button class="navbar-burger flex items-center text-blue-600 p-3">

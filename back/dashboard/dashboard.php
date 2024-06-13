@@ -91,8 +91,138 @@ if ($msg['s'] != "") {
 }
 ?>
 
+<?php
+        $ussscode = $_SESSION["sessionuser"];
+        if (userdata($con, "Mode") == 0) {
+            
+            $alt =  " SELECT * FROM colab WHERE User_code='$ussscode' ";
+            $alt_ex = mysqli_query($con,$alt);
+            $alt_count = mysqli_num_rows($alt_ex);
+            while ($alt_data = mysqli_fetch_array($alt_ex)) {
+              if ($alt_data['Attr'] == 1) {
+
+                ?>
+                  <div class="bg-success p-2">
+                      <p><strong>Note</strong> <?php echo finddoc($con,$alt_data['Doctor_Code']); ?> Connect 
+                      <form action="" method="POST">
+                        <input type="text" name="stucn" id="">
+                        <button type="submit" name="apply" class="btn btn-sm btn-success">Connect</button>
+<?php
+if (isset($_POST['apply'])) {
+  $stucn = $_POST['stucn'];
+  $usercodesok = $alt_data['Doctor_Code'];
+  $updates = " UPDATE colab SET link='$stucn' WHERE User_code='$ussscode' AND Doctor_Code='$usercodesok' ";
+  $updates_ex = mysqli_query($con,$updates);
+}
+?>
+                      </form>
+                      </p>
+                  </div>
+              <?php
+
+              }
+                
+            }
+            
+        }
+
+        $ussscode = $_SESSION["sessionuser"];
+
+        if (userdata($con, "Mode") == 1) {
+            
+            $docqry = " SELECT * FROM colab WHERE Doctor_Code='$ussscode' ";
+            $docqry_ex = mysqli_query($con,$docqry);
+            $docqry_count = mysqli_num_rows($docqry_ex);
+            $docqry_data = mysqli_fetch_array($docqry_ex);
+
+            if ($docqry_data['Attr'] == 1) {
+
+              ?>
+                  <div class="bg-danger p-2">
+                      <p><strong>Note</strong> <?php echo finddoc2($con,$docqry_data['User_code']); ?> Join now 
+                      <?php echo $docqry_data['link']; ?>
+                      <form action="" method="POST">
+                        <button type="submit" name="tickok" class="btn btn-sm btn-secondary">Connect</button>
+
+                        <?php
+if (isset($_POST['tickok'])) {
+  $stucn = 0;
+  $usercodesoks = $docqry_data['User_code'];
+  $updates = " UPDATE colab SET Attr='$stucn' WHERE User_code='$usercodesoks' AND Doctor_Code='$ussscode' ";
+  $updates_ex = mysqli_query($con,$updates);
+  ?>
+  <script> location.replace("<?php echo $docqry_data['link']; ?>"); </script>
+  <?php
+}
+?>
+
+                      </form>
+                      </p>
+                  </div>
+              <?php
+
+            }
+            
+        }
+        
+        ?>
+
 <strong class="my-2"> Games and sports </strong>
 
+<!--<div class="row">-->
+<!--          <div class="col-md-3 col-sm-6 col-12">-->
+<!--            <div class="info-box">-->
+<!--              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">Messages</span>-->
+<!--                <a href="" class="btn btn-sm btn-primary">Play now</a>-->
+<!--              </div>-->
+              <!-- /.info-box-content -->
+<!--            </div>-->
+            <!-- /.info-box -->
+<!--          </div>-->
+          <!-- /.col -->
+<!--          <div class="col-md-3 col-sm-6 col-12">-->
+<!--            <div class="info-box">-->
+<!--              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">Bookmarks</span>-->
+<!--                <a href="" class="btn btn-sm btn-primary">Play now</a>-->
+<!--              </div>-->
+              <!-- /.info-box-content -->
+<!--            </div>-->
+            <!-- /.info-box -->
+<!--          </div>-->
+          <!-- /.col -->
+<!--          <div class="col-md-3 col-sm-6 col-12">-->
+<!--            <div class="info-box">-->
+<!--              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">Uploads</span>-->
+<!--                <a href="" class="btn btn-sm btn-primary">Play now</a>-->
+<!--              </div>-->
+              <!-- /.info-box-content -->
+<!--            </div>-->
+            <!-- /.info-box -->
+<!--          </div>-->
+          <!-- /.col -->
+<!--          <div class="col-md-3 col-sm-6 col-12">-->
+<!--            <div class="info-box">-->
+<!--              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>-->
+
+<!--              <div class="info-box-content">-->
+<!--                <span class="info-box-text">Likes</span>-->
+<!--                <a href="" class="btn btn-sm btn-primary">Play now</a>-->
+<!--              </div>-->
+              <!-- /.info-box-content -->
+<!--            </div>-->
+            <!-- /.info-box -->
+<!--          </div>-->
+          <!-- /.col -->
+<!--        </div>-->
 <div class="row">
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">

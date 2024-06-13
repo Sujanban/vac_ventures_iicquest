@@ -570,16 +570,16 @@
 
           <div class="mb-8 lg:mb-0">
             <p class="mb-6 text-lg font-semibold text-gray-700">
-              Usefull Links
+              Useful Links
             </p>
             <ul
               class="flex flex-col space-y-4 text-[14px] font-medium text-gray-500"
             >
-              <li>Home</li>
-              <li>About us</li>
-              <li>Services</li>
-              <li>Doctors</li>
-              <li>Contacts</li>
+              <li><a href="./index.php">Home</a></li>
+              <li><a href="./about.php">About us</a></li>
+              <li><a href="./index.php#service">Services</a></li>
+              <li><a href="./index.php#doctor">Doctors</a></li>
+              <li><a href="./index.php#contact">Contracts</a></li>
             </ul>
           </div>
         </div>

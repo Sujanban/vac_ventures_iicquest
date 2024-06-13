@@ -456,12 +456,7 @@
           </li>
           <li>
             <div class="flex items-center gap-x-6">
-              <img
-                width="100"
-                height="100"
-                src="https://img.icons8.com/clouds/100/exercise.png"
-                alt="exercise"
-              />
+              <img width="64" height="64" src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-yoga-morning-flaticons-flat-flat-icons.png" alt="external-yoga-morning-flaticons-flat-flat-icons"/>
               <div>
                 <h3
                   class="text-base font-semibold leading-7 tracking-tight text-gray-900"
@@ -695,7 +690,7 @@
           <a
             href="mailto:help@mhs.com"
             title=""
-            class="black font-semibold hover:underline"
+            class="black font-semibold hover:underline  px-4 py-2 rounded bg-blue-600 text-white"
           >
             Contact us
           </a>
@@ -760,16 +755,16 @@
 
           <div class="mb-8 lg:mb-0">
             <p class="mb-6 text-lg font-semibold text-gray-700">
-              Usefull Links
+              Useful Links
             </p>
             <ul
               class="flex flex-col space-y-4 text-[14px] font-medium text-gray-500"
             >
-              <li>Home</li>
-              <li>About us</li>
-              <li>Services</li>
-              <li>Doctors</li>
-              <li>Contacts</li>
+              <li><a href="./index.php">Home</a></li>
+              <li><a href="./about.php">About us</a></li>
+              <li><a href="./index.php#service">Services</a></li>
+              <li><a href="./index.php#doctor">Doctors</a></li>
+              <li><a href="./index.php#contact">Contracts</a></li>
             </ul>
           </div>
         </div>

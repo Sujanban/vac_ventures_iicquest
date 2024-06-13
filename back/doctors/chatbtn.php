@@ -18,7 +18,8 @@ if ($selectdoc_count > 0) {
 
     $data = [
         'User_code' => $sessioncode,
-        'Doctor_Code' => $uid
+        'Doctor_Code' => $uid,
+        'Attr' => 1
     ];
     
     $result = insert($con,'colab',$data);

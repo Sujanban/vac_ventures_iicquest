@@ -91,6 +91,20 @@ if ($msg['s'] != "") {
 }
 ?>
 
+<div class=" d-flex justify-content-between align-items-center p-2 bg-primary">
+
+<div class="user-panel d-flex">
+  <div class="image">
+  </div>
+  <div class="info">
+    <a class="d-block text-white">Start video conference with any one</a>
+  </div>
+</div>
+
+<a href="https://test.purbanchaltoday.com/vc.php" target="_blank" class="btn btn-danger">Start</a>
+
+</div>
+
   <div class="row">
 
 <?php

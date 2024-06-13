@@ -1,0 +1,52 @@
+[13-Jun-2024 16:08:53 UTC] PHP Parse error:  syntax error, unexpected double-quote mark, expecting "-" or identifier or variable or number in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 102
+[13-Jun-2024 16:08:56 UTC] PHP Parse error:  syntax error, unexpected double-quote mark, expecting "-" or identifier or variable or number in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 102
+[13-Jun-2024 16:08:57 UTC] PHP Parse error:  syntax error, unexpected double-quote mark, expecting "-" or identifier or variable or number in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 102
+[13-Jun-2024 16:09:03 UTC] PHP Parse error:  syntax error, unexpected double-quote mark, expecting "-" or identifier or variable or number in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 102
+[13-Jun-2024 16:59:48 UTC] PHP Warning:  Undefined array key "sessionuser" in /home/pixdosco/test.purbanchaltoday.com/back/function.php on line 14
+[13-Jun-2024 16:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/pixdosco/test.purbanchaltoday.com/back/function.php on line 18
+[13-Jun-2024 17:09:20 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:09:22 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:09:39 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:10:01 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:11:00 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:11:27 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:11:34 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:11:37 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:11:42 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:11:47 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 111
+[13-Jun-2024 17:13:07 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:13:11 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:13:23 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:13:36 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:02 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:09 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:11 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:33 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:35 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:37 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:43 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:46 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:14:48 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:00 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:21 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:23 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:28 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:32 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:33 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:35 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:37 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:39 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:42 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:43 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:57 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:15:59 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:16:26 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:16:44 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:16:45 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:16:55 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:17:07 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:17:09 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:17:14 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:17:18 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:17:27 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127
+[13-Jun-2024 17:17:29 UTC] PHP Parse error:  Unmatched '}' in /home/pixdosco/test.purbanchaltoday.com/back/dashboard/dashboard.php on line 127

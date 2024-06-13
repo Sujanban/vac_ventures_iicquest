@@ -675,7 +675,7 @@
           score += parseInt(value, 10);
         }
 
-        const url = `/projects/register.php?scores=${score}`;
+        const url = `../register.php?scores=${score}`;
         window.location.href = url;
 
         displayResult(score);
