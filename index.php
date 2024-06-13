@@ -1,1 +1,1 @@
-<script> location.replace("front/index.html"); </script>
+<script> location.replace("front/index.php"); </script>

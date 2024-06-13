@@ -96,11 +96,11 @@ if ($msg['s'] != "") {
 <div class="row">
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
-              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+              <span class="info-box-icon bg-info"><i class="fas fa-lungs"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Messages</span>
-                <a href="" class="btn btn-sm btn-primary">Play now</a>
+                <span class="info-box-text">Inhale</span>
+                <a href="../games/inhel.php" class="btn btn-sm w-50 btn-info">Play now</a>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -109,11 +109,11 @@ if ($msg['s'] != "") {
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
-              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+              <span class="info-box-icon bg-success"><i class="fas fa-brain"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Bookmarks</span>
-                <a href="" class="btn btn-sm btn-primary">Play now</a>
+                <span class="info-box-text">Yoga</span>
+                <a href="../games/meditation.php" class="btn w-50 btn-sm btn-success">Play now</a>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -122,11 +122,11 @@ if ($msg['s'] != "") {
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
-              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
+              <span class="info-box-icon bg-warning"><i class="fas fa-running"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Uploads</span>
-                <a href="" class="btn btn-sm btn-primary">Play now</a>
+                <span class="info-box-text">Excerise</span>
+                <a href="../games/exercise.php" class="btn w-50 btn-sm btn-warning">Play now</a>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -135,11 +135,11 @@ if ($msg['s'] != "") {
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
-              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
+              <span class="info-box-icon bg-danger"><i class="fas fa-music"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Likes</span>
-                <a href="" class="btn btn-sm btn-primary">Play now</a>
+                <span class="info-box-text">Music</span>
+                <a href="../games/song.php" class="btn btn-sm w-50 btn-danger">Play now</a>
               </div>
               <!-- /.info-box-content -->
             </div>
