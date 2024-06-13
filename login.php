@@ -113,7 +113,7 @@ if (isset($_POST['login'])) {
       if ($status == 0) {
         $code = $query_data['Code'];
         $_SESSION['sessionuser'] = $code;
-        $_SESSION['success'] = "Welcome in health care center";
+        $_SESSION['success'] = "Welcome to MHS";
         ?> <script> location.replace("back/dashboard/dashboard.php"); </script> <?php
       }else{
         $_SESSION['error'] = "Your account has been suspended";
