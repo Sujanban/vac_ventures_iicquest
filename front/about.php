@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -50,7 +51,7 @@
   </head>
   <body class="">
     <!-- header component -->
-    <div class="bg-blue-500 max-w-7xl mx-auto">
+    <!-- <div class="bg-blue-500 max-w-7xl mx-auto">
       <nav
         class="relative px-4 py-4 flex justify-between items-center bg-white"
       >
@@ -109,7 +110,7 @@
         >
         <a
           class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
-          href="../register.php"
+          href="../register.php?scores=0"
           >Sign up</a
         >
       </nav>
@@ -194,14 +195,15 @@
               >
               <a
                 class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl"
-                href="../register.php"
+                href="../register.php?scores=0"
                 >Sign Up</a
               >
             </div>
           </div>
         </nav>
       </div>
-    </div>
+    </div> -->
+    <?php include 'nav.php'; ?>
 
     <script>
       // Burger menus

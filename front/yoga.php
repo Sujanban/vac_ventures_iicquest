@@ -102,7 +102,7 @@
         >
         <a
           class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
-          href="../register.php"
+          href="../register.php?scores=0"
           >Sign up</a
         >
       </nav>
@@ -187,7 +187,7 @@
               >
               <a
                 class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl"
-                href="../register.php"
+                href="../register.php?scores=0"
                 >Sign Up</a
               >
             </div>

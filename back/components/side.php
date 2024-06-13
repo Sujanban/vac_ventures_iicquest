@@ -64,6 +64,15 @@ if (userdata($con, "Mode") == 0) {
                 </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="../dashboard/reports.php" class="nav-link">
+                <i class="nav-icon fas fa-stethoscope"></i>
+                <p>
+                    Reports
+                    <!-- <span class="right badge badge-danger">New</span> -->
+                </p>
+                </a>
+            </li>
 
 <?php
 

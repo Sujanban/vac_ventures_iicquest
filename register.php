@@ -1,6 +1,18 @@
 <?php
 session_start();
 include 'functions.php';
+
+if (isset($_SESSION["sessionuser"])) {
+  if ($_GET['scores'] != 0) {
+    $data3 = [
+      'Code' => $codes,
+      'Data' => $_GET['scores']
+    ];
+    $result3 = insert($con,'data',$data3);
+  }
+	?> <script> location.replace("back/dashboard/dashboard.php"); </script> <?php
+}
+
 if (isset($_SESSION['error'])) {
 	$msg['e'] = $_SESSION['error'];
 	unset($_SESSION['error']);
@@ -128,7 +140,61 @@ if ($msg['s'] != "") {
 
 <?php
 
+if ($_GET['scores'] != 0) {
+
 if (isset($_POST['register'])) {
+    $names = $_POST['names'];
+    $mail = $_POST['mail'];
+    $contact = $_POST['contact'];
+    $address = $_POST['address'];
+    $setpass = $_POST['setpass'];
+    $haspass = md5($setpass);
+    $repass = $_POST['repass'];
+    $terms = $_POST['terms'];
+
+    $codes = rand(0000000000,9999999999);
+    $codes2 = rand(0000000000,9999999999);
+
+    if ($terms == 1) {
+        if ($setpass == $repass) {
+            $data = [
+                'Code' => $codes,
+                'Name' => $names,
+                'Email' => $mail,
+                'Contact' => $contact,
+                'Address' => $address,
+                'Security' => $haspass,
+                'Pass_word' => $setpass,
+                'Point' => $codes2
+            ];
+
+            $data2 = [
+              'Code' => $codes,
+              'Data' => $_GET['scores']
+            ];
+            $result2 = insert($con,'data',$data2);
+            $result = insert($con,'users',$data);
+            if ($result || $result2) {
+                $_SESSION['success'] = "user details is added successfully";
+                ?> <script> location.replace("login.php"); </script> <?php
+            }else{
+                $_SESSION['error'] = "Unable to add user details";
+                ?> <script> location.replace("register.php"); </script> <?php
+            }
+        } else {
+            $_SESSION['error'] = "Password and Re-password are not match";
+            ?> <script> location.replace("register.php"); </script> <?php
+        }
+    }else{
+        $_SESSION['error'] = "Please check the agree checkbox, and try again";
+        ?> <script> location.replace("register.php"); </script> <?php
+    }
+
+}
+
+} elseif ($_GET['scores'] == 0) {
+
+  if (isset($_POST['register'])) {
     $names = $_POST['names'];
     $mail = $_POST['mail'];
     $contact = $_POST['contact'];
@@ -171,6 +237,8 @@ if (isset($_POST['register'])) {
 
 }
 
+}
+
 ?>
 
       </form>
@@ -188,5 +256,13 @@ if (isset($_POST['register'])) {
 <script src="back/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="back/dist/js/adminlte.min.js"></script>
+
+
+
+
+
+
+
+
 </body>
 </html>

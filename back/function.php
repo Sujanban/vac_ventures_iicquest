@@ -18,6 +18,7 @@ function userdata($con, $fetchhead) {
     return $userdataqry_fetch[$fetchhead];
   }
 
+
   function insert($con,$table,$data) {
     $col = array_keys($data);
     $value = array_values($data);

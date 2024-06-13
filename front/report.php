@@ -1,3 +1,38 @@
+<?php
+session_start();
+include '../functions.php';
+if (!isset($_SESSION["sessionuser"])) {
+	?> <script> location.replace("../login.php"); </script> <?php
+}
+
+$uid = $_GET['id'];
+
+$userdataqry = " SELECT * FROM data WHERE UID='$uid' ";
+    $userdataqry_ex = mysqli_query($con, $userdataqry);
+    $userdataqry_fetch = mysqli_fetch_array($userdataqry_ex);
+
+    $usercode = $userdataqry_fetch['Code'];
+
+    $userdataqry1 = " SELECT * FROM users WHERE Code='$usercode' ";
+    $userdataqry1_ex = mysqli_query($con, $userdataqry1);
+    $userdataqry1_fetch = mysqli_fetch_array($userdataqry1_ex);
+
+
+    if ($userdataqry_fetch['Data'] <= 13) {
+      $status = "You are fine.";
+      $stages = "---";
+    }elseif ($userdataqry_fetch['Data'] >= 14 AND $userdataqry_fetch['Data'] <= 19) {
+      $status = "You are in mild depression stages.";
+      $stages = "Mild depression";
+    }elseif ($userdataqry_fetch['Data'] >= 20 AND $userdataqry_fetch['Data'] <= 23) {
+      $status = "You are in moderate depression stages.";
+      $stages = "Moderarte depression";
+    }elseif ($userdataqry_fetch['Data'] >= 24) {
+      $status = "You are in severe depression stages.";
+      $stages = "Severe depression";
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,20 +103,37 @@
   <body>
     <div class="report-container">
       <header>
-        <h1>MHS Report</h1>
-        <p>Patient Name: John Doe</p>
-        <p>Date: 2024-06-13</p>
+        <h1 style="font-size: 18px; font-weight: 700;">MHS Report</h1>
+        <p>Patient Name: <?php echo $userdataqry1_fetch['Name']; ?></p>
+        <p>Date: <?php echo $userdataqry_fetch['Date']; ?></p>
       </header>
       <section class="patient-info">
         <h2>Results</h2>
-        <p><strong>Score:</strong> 30</p>
-        <p><strong>Status:</strong> 30</p>
-        <p><strong>Stage:</strong> 30</p>
+        <p><strong>Score:</strong> <?php echo $userdataqry_fetch['Data']; ?> </p>
+        <p><strong>Status:</strong> <?php echo $status; ?>  </p>
+        <p><strong>Stage:</strong> <?php echo $stages; ?> </p>
       </section>
       <section class="medical-details">
         <h2>Suggestions</h2>
         <p>
-          <strong>Exercises:</strong>
+
+<?php
+
+if ($stages == "---") {
+  ?>
+  <div style="padding: 10px 0px;">
+            <strong style="padding: 10px 2px;">Check out our Resources:</strong>
+            <div>
+                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/inhel.php">Inhale and Exhale Games</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/meditation.php">Attend Meditation session</a></li>
+            </div>
+          </div>
+  <?php
+}elseif ($stages == "Mild depression") {
+
+  ?>
+
+<strong>Do:</strong>
           <div>
             <li style="padding: 2px;">Engaging in activities like walking, yoga and Dancing</li>
             <li style="padding: 2px;">Practice deep breathing</li>
@@ -89,22 +141,50 @@
             <li style="padding: 2px;">Listen positive music.</li>
           </div>
 
+          <div style="padding: 10px 0px;">
+            <strong style="padding: 10px 2px;">Check out our Resources:</strong>
+            <div>
+                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/inhel.php">Inhale and Exhale Games</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/meditation.php">Attend Meditation session</a></li>
+            </div>
+          </div>
+
+  <?php
+
+}else{
+
+?>
+
+<strong>Do:</strong>
+          <div>
+            <li style="padding: 2px;">Engaging in activities like walking, yoga and Dancing</li>
+            <li style="padding: 2px;">Practice deep breathing</li>
+            <li style="padding: 2px;">Staying hydrated</li>
+            <li style="padding: 2px;">Listen positive music.</li>
+          </div>
 
           <div style="padding: 10px 0px;">
-            <strong style="padding: 10px 2px;">Exercises:</strong>
+            <strong style="padding: 10px 2px;">Check out our Resources:</strong>
+            <div>
+                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/inhel.php">Inhale and Exhale Games</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/meditation.php">Attend Meditation session</a></li>
+            </div>
+          </div>
+
+          <div style="padding: 10px 0px;">
+            <strong style="padding: 10px 2px;">Most do:</strong>
             <div>
                 <li style="padding: 2px;">Consult to any doctor without hegitation</li>
                 <li style="padding: 2px;">Do the following tasks that are mentioned below</li>
             </div>
           </div>
 
-          <div style="padding: 10px 0px;">
-            <strong style="padding: 10px 2px;">Resources:</strong>
-            <div>
-                <li style="padding: 2px;"><a class="text-blue-500" href="">Inhale and Exhale Games</a></li>
-                <li style="padding: 2px;"><a class="text-blue-500" href="">Attend Meditation session</a></li>
-            </div>
-          </div>
+<?php
+  
+}
+
+?>
+
         </p>
         <p class="text-orange-400">
           <strong>*Notes:</strong> This report is automatically generated by system.*
