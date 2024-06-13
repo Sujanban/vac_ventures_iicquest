@@ -1,0 +1,1 @@
+<script> location.replace("front/index.html"); </script>
