@@ -124,8 +124,8 @@ if ($stages == "---") {
   <div style="padding: 10px 0px;">
             <strong style="padding: 10px 2px;">Check out our Resources:</strong>
             <div>
-                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/inhel.php">Inhale and Exhale Games</a></li>
-                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/meditation.php">Attend Meditation session</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="../back/games/inhel.php">Inhale and Exhale Games</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="../back/games/meditation.php">Attend Meditation session</a></li>
             </div>
           </div>
   <?php
@@ -144,8 +144,8 @@ if ($stages == "---") {
           <div style="padding: 10px 0px;">
             <strong style="padding: 10px 2px;">Check out our Resources:</strong>
             <div>
-                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/inhel.php">Inhale and Exhale Games</a></li>
-                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/meditation.php">Attend Meditation session</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="../back/games/inhel.php">Inhale and Exhale Games</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="../back/games/meditation.php">Attend Meditation session</a></li>
             </div>
           </div>
 
@@ -166,8 +166,8 @@ if ($stages == "---") {
           <div style="padding: 10px 0px;">
             <strong style="padding: 10px 2px;">Check out our Resources:</strong>
             <div>
-                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/inhel.php">Inhale and Exhale Games</a></li>
-                <li style="padding: 2px;"><a class="text-blue-500" href="http://localhost/projects/back/games/meditation.php">Attend Meditation session</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="../back/games/inhel.php">Inhale and Exhale Games</a></li>
+                <li style="padding: 2px;"><a class="text-blue-500" href="../back/games/meditation.php">Attend Meditation session</a></li>
             </div>
           </div>
 
