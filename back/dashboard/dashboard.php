@@ -297,8 +297,8 @@ if (isset($_POST['tickok'])) {
     <div class="row">
       <div class="col-sm-4 border-right">
         <div class="description-block">
-          <h5 class="description-header">20%</h5>
-          <span class="description-text">Complated</span>
+          <h5 class="description-header">0%</h5>
+          <span class="description-text">Comming Soon...</span>
         </div>
         <!-- /.description-block -->
       </div>
@@ -316,7 +316,7 @@ if (isset($_POST['tickok'])) {
         <a href="" class="btn btn-success">
             <div class=" d-flex align-items-center">
             <i class="fas fa-unlock"></i>
-            <span class="pl-2">continue</span>
+            <span class="pl-2">Locked</span>
             </div>
           </a>
         </div>
@@ -347,7 +347,7 @@ if (isset($_POST['tickok'])) {
     <div class="row">
       <div class="col-sm-4 border-right">
         <div class="description-block">
-          <h5 class="description-header">20%</h5>
+          <h5 class="description-header">0%</h5>
           <span class="description-text">Complated</span>
         </div>
         <!-- /.description-block -->
@@ -366,7 +366,7 @@ if (isset($_POST['tickok'])) {
         <a href="" class="btn btn-primary">
             <div class=" d-flex align-items-center">
             <i class="fas fa-lock"></i>
-            <span class="pl-2">continue</span>
+            <span class="pl-2">Locked</span>
             </div>
           </a>
         </div>
@@ -397,8 +397,8 @@ if (isset($_POST['tickok'])) {
     <div class="row">
       <div class="col-sm-4 border-right">
         <div class="description-block">
-          <h5 class="description-header">20%</h5>
-          <span class="description-text">Complated</span>
+          <h5 class="description-header">0%</h5>
+          <span class="description-text">Locked</span>
         </div>
         <!-- /.description-block -->
       </div>
@@ -416,7 +416,7 @@ if (isset($_POST['tickok'])) {
         <a href="" class="btn btn-danger">
             <div class=" d-flex align-items-center">
             <i class="fas fa-lock"></i>
-            <span class="pl-2">continue</span>
+            <span class="pl-2">Locked</span>
             </div>
           </a>
         </div>
@@ -447,8 +447,8 @@ if (isset($_POST['tickok'])) {
     <div class="row">
       <div class="col-sm-4 border-right">
         <div class="description-block">
-          <h5 class="description-header">20%</h5>
-          <span class="description-text">Complated</span>
+          <h5 class="description-header">0%</h5>
+          <span class="description-text">Locked</span>
         </div>
         <!-- /.description-block -->
       </div>
@@ -466,7 +466,7 @@ if (isset($_POST['tickok'])) {
           <a href="" class="btn btn-info">
             <div class=" d-flex align-items-center">
             <i class="fas fa-lock"></i>
-            <span class="pl-2">continue</span>
+            <span class="pl-2">Locked</span>
             </div>
           </a>
         </div>
